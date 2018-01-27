@@ -1,8 +1,5 @@
 default = {}
 
---Setting MapGen Aliases
-
---Terrain
 minetest.register_alias("mapgen_stone", "default:stone")
 minetest.register_alias("mapgen_water_source", "default:water_source")
 minetest.register_alias("mapgen_river_water_source", "default:water_source")
@@ -12,8 +9,6 @@ minetest.register_alias("mapgen_dirt", "default:dirt")
 minetest.register_alias("mapgen_dirt_with_grass", "default:dirt")
 minetest.register_alias("mapgen_sand", "default:dirt")
 minetest.register_alias("mapgen_gravel", "default:dirt")
-
---Flora
 minetest.register_alias("mapgen_jungletree", "default:tree")
 minetest.register_alias("mapgen_tree", "default:tree")
 minetest.register_alias("mapgen_pine_tree", "default:tree")
@@ -128,17 +123,3 @@ minetest.register_node("default:grass", {
 	tiles ={"medium_blue.png"},
 	groups = {crumbly=3},
 })
---[[
-function swap_node(pos,name)
-	local node = minetest.get_node(pos)
-	if node.name == name then
-		return
-	end
-	node.name = name
-	minetest.swap_node(pos, node)
-end
-]]--
-print("Micro SubGame Loaded")
-
--- END
-
